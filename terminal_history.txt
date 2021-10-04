@@ -338,3 +338,796 @@
   338  git commit -m "added the save_csv function"
   339  history 50 > terminal_history.txt
   340  history 500 > terminal_history.txt
+
+I was using the terminal in vscode most of the time and my history command didnt work in here...?
+
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+(base) PS C:\Users\Ling Zhou\Documents\challenge_two> conda activate dev
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two>  & 'C:\Users\Ling Zhou\anaconda3\envs\dev\python.exe' 'c:\Users\Ling Zhou\.vscode\extensions\ms-python.python-2021.9.1246542782\pythonFiles\lib\python\debugpy\launcher' '62701' '--' 'c:\Users\Ling Zhou\Documents\challenge_two\app.py'
+? Enter a file path to a rate-sheet (.csv): ../data/daily_rate_sheet.csv
+Oops! Can't find this path: ..\data\daily_rate_sheet.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two>  c:; cd 'c:\Users\Ling Zhou\Documents\challenge_two'; & 'C:\Users\Ling Zhou\anaconda3\envs\dev\python.exe' 'c:\Users\Ling Zhou\.vscode\extensions\ms-python.python-2021.9.1246542782\pythonFiles\lib\python\debugpy\launcher' '57205' '--' 'c:\Users\Ling Zhou\Documents\challenge_two\app.py' 
+? Enter a file path to a rate-sheet (.csv): daily_rate_sheet.csv
+Oops! Can't find this path: daily_rate_sheet.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two>  c:; cd 'c:\Users\Ling Zhou\Documents\challenge_two'; & 'C:\Users\Ling Zhou\anaconda3\envs\dev\python.exe' 'c:\Users\Ling Zhou\.vscode\extensions\ms-python.python-2021.9.1246542782\pyt? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 500
+? What's your current amount of monthly debt? 100
+? What's your total monthly income? 1000
+? What's your desired loan amount? 1000
+? What's your home value? 2000
+The monthly debt to income ratio is 0.10
+The loan to value ratio is 0.50.
+Found 0 qualifying loans
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two>  c:; cd 'c:\Users\Ling Zhou\Documents\challenge_two'; & 'C:\Users\Ling Zhou\anaconda3\envs\dev\python.exe' 'c:\Users\Ling Zhou\.vscode\extensions\ms-python.python-2021.9.1246542782\pythonFiles\lib\python\debugpy\launcher' '52414' '--' 'c:\Users\Ling Zhou\Documents\challenge_two\app.py' 
+? Enter a file path to a rate-sheet (.csv):  c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+Traceback (most recent call last):
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 466, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 142, in run
+    bank_data = load_bank_data()
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 49, in load_bank_data
+    if not csvpath.exists():
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\pathlib.py", line 1400, in exists
+    self.stat()
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\pathlib.py", line 1197, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] The filename, directory name, or volume label syntax is incorrect: ' c:\\Users\\Ling Zhou\\Documents\\challenge_two\\data\\daily_rate_sheet.csv'
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 800
+? What's your current amount of monthly debt? 0
+? What's your total monthly income? 500000
+? What's your desired loan amount? 10000
+? What's your home value? 500000000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.00.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 466, in _Fire
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 153, in run
+    save_qualifying_loans(qualifying_loans)
+  File "app.py", line 134, in save_qualifying_loans
+    save_csv(csvpath,header,qualifying_loans)
+  File "app.py", line 34, in save_csv
+    csvwriter.writerow(header)
+ValueError: I/O operation on closed file.
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two>  c:; cd 'c:\Users\Ling Zhou\Documents\challenge_two'; & 'C:\Users\Ling Zhou\anaconda3\envs\dev\python.exe' 'c:\Users\Ling Zhou\.vscode\extensions\ms-python.python-2021.9.1246542782\pythonFiles\lib\python\debugpy\launcher' '63757' '--' 'c:\Users\Ling Zhou\Documents\challenge_two\app.py' 
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 800
+? What's your current amount of monthly debt? 0
+? What's your total monthly income? 50000000000
+? What's your desired loan amount? 50
+? What's your home value? 500
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.10.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? ling
+Traceback (most recent call last):
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 466, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 153, in run
+    save_qualifying_loans(qualifying_loans)
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 134, in save_qualifying_loans
+    save_csv(csvpath,header,qualifying_loans)
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 34, in save_csv
+    csvwriter.writerow(header)
+ValueError: I/O operation on closed file.
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv):  c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 466, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 142, in run
+    bank_data = load_bank_data()
+  File "app.py", line 49, in load_bank_data
+    if not csvpath.exists():
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\pathlib.py", line 1400, in exists
+    self.stat()
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\pathlib.py", line 1197, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] The filename, directory name, or volume label syntax is incorrect: ' c:\\Users\\Ling Zhou\\Documents\\challenge_two\\data\\daily_rate_sheet.csv'
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 800
+? What's your current amount of monthly debt? 8
+? What's your total monthly income? 80000000
+? What's your desired loan amount? 8000
+? What's your home value? 8000000000000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.00.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file?
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 466, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 153, in run
+    save_qualifying_loans(qualifying_loans)
+  File "app.py", line 134, in save_qualifying_loans
+    save_csv(csvpath,header,qualifying_loans)
+  File "app.py", line 30, in save_csv
+    with open(csvpath,"w", newline='') as csvfile:
+PermissionError: [Errno 13] Permission denied: '.'
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 80000
+? What's your current amount of monthly debt? 80
+? What's your total monthly income? 80000
+? What's your desired loan amount? 80
+? What's your home value? 800000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.00.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? ling.csv
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 153, in run
+    save_qualifying_loans(qualifying_loans)
+  File "app.py", line 134, in save_qualifying_loans
+    save_csv(csvpath,header,qualifying_loans)
+  File "app.py", line 34, in save_csv
+    csvwriter.writerow(header)
+ValueError: I/O operation on closed file.
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 800
+? What's your current amount of monthly debt? 8
+? What's your total monthly income? 800000
+? What's your desired loan amount? 500
+? What's your home value? 800000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.00.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? ling.csv
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 153, in run
+    save_qualifying_loans(qualifying_loans)
+  File "app.py", line 134, in save_qualifying_loans
+    save_csv(csvpath,header,qualifying_loans)
+  File "app.py", line 34, in save_csv
+    csvwriter.writerow(header)
+ValueError: I/O operation on closed file.
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): def save_csv(pathname, header, full_data):
+    csvpath = Path(pathname)   
+    with open(csvpath,"w", newline='') as csvfile:
+        csvwriter=csv.writer(csvfile)
+    #write header
+        csvwriter.writerow(hea
+Traceback (most recent call last):    
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 466, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+  File "app.py", line 142, in run
+    bank_data = load_bank_data()
+  File "app.py", line 49, in load_bank_data
+    if not csvpath.exists():
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\pathlib.py", line 1400, in exists
+    self.stat()
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\pathlib.py", line 1197, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] The filename, directory name, or volume label syntax is incorrect: 'def save_csv(pathname, header, full_data):\n    csvpath = Path(pathname)   \n    with open(csvpath,"w", newline=\'\') as csvfile:\n        csvwriter=csv.writer(csvfile)\n    #write header\n        csvwriter.writerow(hea'
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 800
+? What's your current amount of monthly debt?
+? What's your total monthly income? 80000
+? What's your desired loan amount? 800
+? What's your home value? 80000
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 466, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 145, in run
+    credit_score, debt, income, loan_amount, home_value = get_applicant_info()
+  File "app.py", line 69, in get_applicant_info
+    debt = float(debt)
+ValueError: could not convert string to float: ''
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 80000
+? What's your current amount of monthly debt? 50
+? What's your total monthly income? 80000
+? What's your desired loan amount? 800
+? What's your home value? 80000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.01.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? ling.csv
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 153, in run
+    save_qualifying_loans(qualifying_loans)
+  File "app.py", line 134, in save_qualifying_loans
+    save_csv(csvpath,header,qualifying_loans)
+  File "app.py", line 34, in save_csv
+    csvwriter.writerow(header)
+ValueError: I/O operation on closed file.
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): with open(csvpath,"w", newline='') as csvfile:
+        csvwriter=csv.writer(csvfile)
+    #write header
+        csvwriter.writerow(header)
+        for data in full_data:
+            csvwriter.writerow(data.values())
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 466, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+  File "app.py", line 142, in run
+    bank_data = load_bank_data()
+  File "app.py", line 49, in load_bank_data
+    if not csvpath.exists():
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\pathlib.py", line 1400, in exists
+    self.stat()
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\pathlib.py", line 1197, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] The filename, directory name, or volume label syntax is incorrect: 'with open(csvpath,"w", newline=\'\') as csvfile:\n        csvwriter=csv.writer(csvfile)\n    #write header\n        csvwriter.writerow(header)\n 
+       for data in full_data:\n            csvwriter.writerow(data.values())'
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 800
+? What's your current amount of monthly debt? 8
+? What's your total monthly income? 80000
+? What's your desired loan amount? 80
+? What's your home value? 80000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.00.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? ling.csv
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 153, in run
+    save_qualifying_loans(qualifying_loans)
+  File "app.py", line 134, in save_qualifying_loans
+    save_csv(csvpath,header,qualifying_loans)
+  File "app.py", line 34, in save_csv
+    csvwriter.writerow(header)
+ValueError: I/O operation on closed file.
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 800
+? What's your current amount of monthly debt? 8
+? What's your total monthly income? 80000
+? What's your desired loan amount? 800
+? What's your home value? 80000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.01.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? ling.csv
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 153, in run
+    save_qualifying_loans(qualifying_loans)
+  File "app.py", line 134, in save_qualifying_loans
+    save_csv(csvpath,header,qualifying_loans)
+  File "app.py", line 34, in save_csv
+    csvwriter.writerow(header)
+ValueError: I/O operation on closed file.
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 800
+? What's your current amount of monthly debt? 8
+? What's your total monthly income? 800000
+? What's your desired loan amount? 800
+? What's your home value? 80000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.01.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? ling_zhou.csv
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 153, in run
+    save_qualifying_loans(qualifying_loans)
+  File "app.py", line 134, in save_qualifying_loans
+    save_csv(csvpath,header,qualifying_loans)
+  File "app.py", line 34, in save_csv
+    csvwriter.writerow(header)
+ValueError: I/O operation on closed file.
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 600
+? What's your current amount of monthly debt? 500
+? What's your total monthly income? 5000
+? What's your desired loan amount? 5000
+? What's your home value? 80000
+The monthly debt to income ratio is 0.10
+The loan to value ratio is 0.06.
+Found 2 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? lingzhou.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 700
+? What's your current amount of monthly debt? 80
+? What's your total monthly income? 8000
+? What's your desired loan amount? 8000
+? What's your home value? 800000
+The monthly debt to income ratio is 0.01
+The loan to value ratio is 0.01.
+Found 11 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? ling.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 700
+? What's your current amount of monthly debt? 80
+? What's your total monthly income? 8000
+? What's your desired loan amount? 8000
+? What's your home value? 80000
+The monthly debt to income ratio is 0.01
+The loan to value ratio is 0.10.
+Found 11 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? zhou.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 700
+? What's your current amount of monthly debt? 80
+? What's your total monthly income? 8000
+? What's your desired loan amount? 8000
+? What's your home value? 80000
+The monthly debt to income ratio is 0.01
+The loan to value ratio is 0.10.
+Found 11 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? zhou.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 700
+? What's your current amount of monthly debt? 80
+? What's your total monthly income? 8000
+? What's your desired loan amount? 8000
+? What's your home value? 80000
+The monthly debt to income ratio is 0.01
+The loan to value ratio is 0.10.
+Found 11 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? ling.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your current amount of monthly debt? 8
+? What's your total monthly income? 8000
+? What's your desired loan amount? 8000
+? What's your home value? 80000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.10.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? dead.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two>  c:; cd 'c:\Users\Ling Zhou\Documents\challenge_two'; & 'C:\Users\Ling Zhou\anaconda3\envs\dev\python.exe' 'c:\Users\Ling Zhou\.vscode\extensions\ms-python.python-2021.9.1246542782\pythonFiles\lib\python\debugpy\launcher' '56974' '--' 'c:\Users\Ling Zhou\Documents\challenge_two\app.py' 
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 750
+? What's your current amount of monthly debt? 50
+? What's your total monthly income? 5000
+? What's your desired loan amount? 5000
+? What's your home value? 80000
+The monthly debt to income ratio is 0.01
+The loan to value ratio is 0.06.
+Found 15 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? kill.csv
+Traceback (most recent call last):
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 158, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 466, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 154, in run
+    save_qualifying_loans(qualifying_loans)
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 135, in save_qualifying_loans
+    save_csv(csvpath, header, qualifying_loans)
+  File "c:\Users\Ling Zhou\Documents\challenge_two\app.py", line 114, in save_csv
+    csvwriter.writerow(row.values())
+AttributeError: 'list' object has no attribute 'values'
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 800
+? What's your current amount of monthly debt? 80
+? What's your total monthly income? 5000
+? What's your desired loan amount? 50
+? What's your home value? 50000
+The monthly debt to income ratio is 0.02
+The loan to value ratio is 0.00.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? lz.csv
+Traceback (most recent call last):
+  File "app.py", line 158, in <module>
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 154, in run
+
+  File "app.py", line 135, in save_qualifying_loans
+
+  File "app.py", line 114, in save_csv
+
+AttributeError: 'list' object has no attribute 'values'
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 800
+? What's your current amount of monthly debt? 50
+? What's your total monthly income? 8000
+? What's your desired loan amount? 8000
+? What's your home value? 80000
+The monthly debt to income ratio is 0.01
+The loan to value ratio is 0.10.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? lingzhou.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 0
+? What's your current amount of monthly debt? 1000
+? What's your total monthly income? 0
+? What's your desired loan amount? 1000
+? What's your home value? 0
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 148, in run
+    qualifying_loans = find_qualifying_loans(
+  File "app.py", line 90, in find_qualifying_loans
+    monthly_debt_ratio = calculate_monthly_debt_ratio(debt, income)
+  File "C:\Users\Ling Zhou\Documents\challenge_two\qualifier\utils\calculators.py", line 20, in calculate_monthly_debt_ratio
+    monthly_debt_ratio = int(monthly_debt_payment) / int(monthly_income)
+ZeroDivisionError: division by zero
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 5
+? What's your current amount of monthly debt? 1000
+? What's your total monthly income? 1
+? What's your desired loan amount? 1000000
+? What's your home value? 1
+The monthly debt to income ratio is 1000.00
+The loan to value ratio is 1000000.00.
+Found 0 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? blah.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 1
+? What's your current amount of monthly debt? 8000
+? What's your total monthly income? 80
+? What's your desired loan amount? 80000000
+? What's your home value? 2
+The monthly debt to income ratio is 100.00
+The loan to value ratio is 40000000.00.
+Found 0 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file?
+Traceback (most recent call last):
+  File "app.py", line 157, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 153, in run
+    save_qualifying_loans(qualifying_loans)
+  File "app.py", line 134, in save_qualifying_loans
+    save_csv(csvpath, header, qualifying_loans)
+  File "app.py", line 109, in save_csv
+    with open(csvpath,"w", newline='') as csvfile:
+PermissionError: [Errno 13] Permission denied: '.'
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 50
+? What's your current amount of monthly debt? 100000
+? What's your total monthly income? 1
+? What's your desired loan amount? 100000000000
+? What's your home value? 1
+The monthly debt to income ratio is 100000.00
+The loan to value ratio is 100000000000.00.
+Found 0 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+You don't qualify for any loans! loser!!
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git status    
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    new_file.csv
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git add app.py
+warning: CRLF will be replaced by LF in app.py.
+The file will have its original line endings in your working directory
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+
+Changes not staged for commit:
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    new_file.csv
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git commit -m "wrote save_qualifying_loans with questionary prompts"
+[main 0314e2f] wrote save_qualifying_loans with questionary prompts
+ 1 file changed, 23 insertions(+), 23 deletions(-)
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    new_file.csv
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 24 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.22 KiB | 1.22 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/LZhou1688/challenge_two.git
+   92a45e9..0314e2f  main -> main
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    new_file.csv
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 50
+? What's your current amount of monthly debt? 5000
+? What's your total monthly income? 1
+? What's your desired loan amount? 8000000
+? What's your home value? 1
+The monthly debt to income ratio is 5000.00
+The loan to value ratio is 8000000.00.
+Found 0 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+You don't qualify for any loans! loser!!
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 800
+? What's your current amount of monthly debt? 8
+? What's your total monthly income? 8000
+? What's your desired loan amount? 8000
+? What's your home value? 800000000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.00.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? loans_baby
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 800
+? What's your current amount of monthly debt? 10
+? What's your total monthly income? 8000
+? What's your desired loan amount? 8000
+? What's your home value? 80000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.10.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? ling.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? Enter a file path to a rate-sheet (.csv): c:\Users\Ling Zhou\Documents\challenge_two\data\daily_rate_sheet.csv
+? What's your credit score? 800
+? What's your current amount of monthly debt? 1
+? What's your total monthly income? 8000
+? What's your desired loan amount? 8000
+? What's your home value? 800000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.01.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file?
+Traceback (most recent call last):
+  File "app.py", line 160, in <module>
+    fire.Fire(run)
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+    component, remaining_args = _CallAndUpdateTrace(
+  File "C:\Users\Ling Zhou\anaconda3\envs\dev\lib\site-packages\fire\core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "app.py", line 156, in run
+    save_qualifying_loans(qualifying_loans)
+  File "app.py", line 137, in save_qualifying_loans
+    save_csv(csvpath, header, qualifying_loans)
+  File "app.py", line 110, in save_csv
+    with open(csvpath,"w", newline='') as csvfile:
+PermissionError: [Errno 13] Permission denied: '.'
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your current amount of monthly debt? 8
+? What's your total monthly income? 8000
+? What's your desired loan amount? 8000
+? What's your home value? 800000
+The loan to value ratio is 0.01.
+Found 24 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+? What would you like to name your save file? lingzhou.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> 
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git stats
+git: 'stats' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+        modified:   app.py
+        deleted:    new_file.csv
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ling.csv
+        lingzhou.csv
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git add app.py
+warning: CRLF will be replaced by LF in app.py.
+The file will have its original line endings in your working directory
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git commit -m "fixed csv print function"
+[main 968f162] fixed csv print function
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 24 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/LZhou1688/challenge_two.git
+   0314e2f..968f162  main -> main
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 800
+? What's your current amount of monthly debt? 1
+? What's your total monthly income? 1000000
+? What's your desired loan amount? 10
+? What's your home value? 100000000
+The monthly debt to income ratio is 0.00
+The loan to value ratio is 0.00.
+? What would you like to name your save file? ding.csv
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> history 100> terminal_history.txt
+Get-History : Cannot bind parameter 'Count'. Cannot convert value "terminal_history.txt" to type "System.Int32". Error: "Input string was not in a correct format."
+At line:1 char:14
++ history 100> terminal_history.txt
++              ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-History], ParameterBindingException
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> history 50 > terminal_history.txt
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> history 100 > terminal_history.txt
+history : Cannot locate the history for Id 100.
+At line:1 char:1
++ history 100 > terminal_history.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (100:Int64) [Get-History], ArgumentException
+    + FullyQualifiedErrorId : GetHistoryNoHistoryForId,Microsoft.PowerShell.Commands.GetHistoryCommand
+ 
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> history 50 > terminal_history.txt
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> python app.py
+? What's your credit score? 2
+? What's your current amount of monthly debt? 10000
+? What's your total monthly income? 1
+? What's your desired loan amount? 100000
+? What's your home value? 1
+The monthly debt to income ratio is 10000.00
+The loan to value ratio is 100000.00.
+Found 0 qualifying loans
+? Would you like to save your list of qualifying loans? Yes
+You don't qualify for any loans! loser!!
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> history 50 > terminal_history.txt 
+(dev) PS C:\Users\Ling Zhou\Documents\challenge_two> 

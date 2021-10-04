@@ -125,7 +125,7 @@ def save_qualifying_loans(qualifying_loans):
     save_yes = questionary.confirm("Would you like to save your list of qualifying loans?").ask()
     
     if len(qualifying_loans)==0:
-        print("You don't qualify for any loans! loser!!")
+        print("You don't qualify for any loans! loser!! Nothing will be saved...")
     else:
         new_csv_path = questionary.text("What would you like to name your save file?").ask()
         csvpath = Path(new_csv_path)
