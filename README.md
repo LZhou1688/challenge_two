@@ -4,7 +4,7 @@ Multi-part, modularized app which can be used (along with client data income,deb
 
 ## Technologies
 
-This program uses Python, CSV.py, Fire, Questionary, and Path from pathlib.
+This program  uses Python, CSV.py, Fire, Questionary, and Path from pathlib.
 
 ---
 
