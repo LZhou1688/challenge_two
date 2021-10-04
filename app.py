@@ -110,7 +110,8 @@ def save_csv(pathname, header, qualifying_loans):
     with open(csvpath,"w", newline='') as csvfile:
         csvwriter=csv.writer(csvfile)
         csvwriter.writerow(header)
-        csvwriter.writerow(qualifying_loans)
+        for row in qualifying_loans:
+            csvwriter.writerow(row)
 
 
 
