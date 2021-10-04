@@ -122,22 +122,28 @@ def save_qualifying_loans(qualifying_loans):
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
+    #ask user if they wish to save
     save_yes = questionary.confirm("Would you like to save your list of qualifying loans?").ask()
     
-    if len(qualifying_loans)==0:
-        print("You don't qualify for any loans! loser!! Nothing will be saved...")
-    else:
-        new_csv_path = questionary.text("What would you like to name your save file?").ask()
-        csvpath = Path(new_csv_path)
-
-        #if not csvpath.exists():
-        #   sys.exit(f"Oops! Can't find this path: {csvpath}")
-
-        header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
+    #if yes, go through save protocol
+    if save_yes==True:
+        #checks to make sure there are qualifying loans to save
+        if len(qualifying_loans)==0:
+            #if not let the user know that nothign is saved
+            print("You don't qualify for any loans! loser!! Nothing will be saved...")
+        else:
+            #if so ask for name of file
+            new_csv_path = questionary.text("What would you like to name your save file?").ask()
+            csvpath = Path(new_csv_path)
+            #set the header
+            header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
             
-        save_csv(csvpath, header, qualifying_loans)
+            #call save csv function
+            save_csv(csvpath, header, qualifying_loans)
 
-
+            print("Congrats, your file has been saved.")
+    else:
+        print("You have chosen not to save. Goodbye")
 
 def run():
     """The main function for running the script."""
