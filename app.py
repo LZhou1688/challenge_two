@@ -10,6 +10,7 @@ import sys
 import fire
 import questionary
 from pathlib import Path
+#import csv in order to save output as csv
 import csv
 
 from qualifier.utils.fileio import load_csv
@@ -23,6 +24,18 @@ from qualifier.filters.max_loan_size import filter_max_loan_size
 from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
+
+def save_csv(pathname, header, full_data):
+  csvpath = Path(pathname)
+    
+with open(csvpath,"w", newline='') as csvfile:
+    csvwriter=csv.writer(csvfile)
+
+    #write header
+    csvwriter.writerow(header)
+    for data in full_data:
+        csvwriter.writerow(data.values())
+
 
 
 def load_bank_data():
@@ -114,7 +127,7 @@ def save_qualifying_loans(qualifying_loans):
     csvpath = Path("new_file.csv")
     #if not csvpath.exists():
     #   sys.exit(f"Oops! Can't find this path: {csvpath}")
-    header = []
+    header = [Lender,Max Loan Amount,Max LTV,Max DTI,Min Credit Score,Interest Rate]
     with open(csvpath,"w", newline='') as csvfile:
         csvwriter=csv.writer(csvfile)
 
