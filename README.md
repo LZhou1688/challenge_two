@@ -1,33 +1,36 @@
-# Project Title
-
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
-
+# Module 2 Challenge - Loan Qualifier 
+Multi-part, modularized app which can be used (along with client data income,debt,homevalue,credit score) to identify loans for which the client qualifies.
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This program uses Python, CSV.py, Fire, Questionary, and Path from pathlib.
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+In order to run this program you need to install fire and questionary:
 
+```python
+pip install fire
+pip install questionary
+```
 ---
 
 ## Usage
-
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+See below for how the output of this program.
+![alt text](https://github.com/LZhou1688/challenge_two/blob/main/CLI%20Example.PNG)
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+Ling Zhou
+Columbia Fintech Bootcamp provided most of the code
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+MIT License
