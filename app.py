@@ -25,17 +25,6 @@ from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
 
-def save_csv(pathname, header, full_data):
-  csvpath = Path(pathname)
-    
-with open(csvpath,"w", newline='') as csvfile:
-    csvwriter=csv.writer(csvfile)
-
-    #write header
-    csvwriter.writerow(header)
-    for data in full_data:
-        csvwriter.writerow(data.values())
-
 
 
 def load_bank_data():
@@ -115,6 +104,15 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     return bank_data_filtered
 
+#function to save list of qualifying loans into csv names "pathname", header input
+def save_csv(pathname, header, qualifying_loans):
+    csvpath = Path(pathname)   
+    with open(csvpath,"w", newline='') as csvfile:
+        csvwriter=csv.writer(csvfile)
+        csvwriter.writerow(header)
+        csvwriter.writerow(qualifying_loans)
+
+
 
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
@@ -123,18 +121,20 @@ def save_qualifying_loans(qualifying_loans):
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
-    #csvpath = questionary.text("Enter a file path to a rate-sheet (.csv):").ask()
-    csvpath = Path("new_file.csv")
-    #if not csvpath.exists():
-    #   sys.exit(f"Oops! Can't find this path: {csvpath}")
-    header = [Lender,Max Loan Amount,Max LTV,Max DTI,Min Credit Score,Interest Rate]
-    with open(csvpath,"w", newline='') as csvfile:
-        csvwriter=csv.writer(csvfile)
+    save_yes = questionary.confirm("Would you like to save your list of qualifying loans?").ask()
+    
+    if len(qualifying_loans)==0:
+        print("You don't qualify for any loans! loser!!")
+    else:
+        new_csv_path = questionary.text("What would you like to name your save file?").ask()
+        csvpath = Path(new_csv_path)
 
-        #write header
-        csvwriter.writerow(header)
-        for loan in qualifying_loans:
-            csvwriter.writerow(loan.values())
+        #if not csvpath.exists():
+        #   sys.exit(f"Oops! Can't find this path: {csvpath}")
+
+        header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
+            
+        save_csv(csvpath, header, qualifying_loans)
 
 
 
