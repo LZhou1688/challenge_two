@@ -1,0 +1,340 @@
+    1  ls -al ~/.ssh
+    2  ssh-keygen –t rsa –b 4096 –C "lzhou1688@gmail.com"
+    3  ssh-keygen -t rsa -b 4096 -C "lzhou1688@gmail.com"
+    4  eval "$(ssh-agent -s)"
+    5  ssh-add ~/.ssh/id_rsa
+    6  clip <~/.ssh/id_rsa.pub
+    7  ssh -T git@github.com
+    8  conda
+    9  conda --version
+   10  export PATH="/anaconda3/bin":$PATH
+   11  conda --version
+   12  export PATH =C:\Users\Ling Zhou\anaconda3\bin:$PATH
+   13  export PATH =C:\Users\Ling_Zhou\anaconda3\bin:$PATH
+   14  export PATH =C:/Users/Ling_Zhou/anaconda3/bin:$PATH
+   15  ./anaconda3/Scripts/conda.exe init
+   16  echo ". '${PWD}'/conda.sh" >> ~/.bashrc
+   17  conda
+   18  echo ". '$C:\Users\Ling Zhou\anaconda3\etc\profile.d'/conda.sh" >> ~/.bashrc
+   19  conda
+   20  echo ". '${PWD}'/conda.sh" >> ~/.bashrc
+   21  conda --version
+   22  conda
+   23  ./anaconda3/Scripts/conda.exe init
+   24  conda --version
+   25  conda init bash
+   26  conda
+   27  conda --version
+   28  conda
+   29  conda
+   30  conda
+   31  conda
+   32  conda --version
+   33  conda
+   34  conda update conda
+   35  conda update anaconda
+   36  conda create -n dev python=3.8 anaconda
+   37  conda avtivate dev
+   38  conda activate dev
+   39  conda init bash
+   40  python -m ipykernel install --user --name dev
+   41  conda install -c conda-forge nodejs
+   42  conda deactivate
+   43  conda activate dev
+   44  jupyter lab
+   45  pwd
+   46  ls
+   47  mkdir FinTech-Workspace
+   48  cd fintech-workspace
+   49  ls
+   50  cd
+   51  cd
+   52  ls
+   53  python --version
+   54  code .
+   55  ls
+   56  cd python-project
+   57  cd my documents
+   58  cd my_documents
+   59  cd 'my documents'@
+   60  cd 'my documents'
+   61  ls
+   62  cd 'python scripts'
+   63  ls
+   64  pwd
+   65  cd
+   66  pwd
+   67  ls
+   68  cd fintech-workspace
+   69  ls
+   70  python python_project
+   71  "python <python_project.py>"
+   72  python hello_python
+   73  python hello_python.py
+   74  ls
+   75  python PythonProject.py
+   76  python python_project.py
+   77  python hello_python.py
+   78  python hello_python
+   79  ls
+   80  cd python project
+   81  cd python_project
+   82  python hello_python
+   83  python hello_python.py
+   84  conda deactivate
+   85  conda activate dev
+   86  cd
+   87  ls
+   88  cd
+   89  ls
+   90  cd fintech-workspace
+   91  ls
+   92  cd python_project
+   93  ls
+   94  jupyter lab
+   95  ls
+   96  cd downloads
+   97  ls
+   98  cd  Class_1_Activities
+   99  ls
+  100  ls
+  101  ls
+  102  ls
+  103  conda activate dev
+  104  code
+  105  install fire
+  106  pip install fire
+  107  cd
+  108  ls
+  109  ls
+  110  cd users
+  111  cd
+  112  ls
+  113  jupyter lab
+  114  conda create -n atmdev1 python=3.7 anaconda
+  115  conda env list
+  116  conda deactivate
+  117  conda atmdev1 activate
+  118  conda activate atmdev1
+  119  install fire
+  120  pip install fire
+  121  pip install questionary
+  122  pwd
+  123  cd
+  124  ls
+  125  cd downloads
+  126  pwd
+  127  ls
+  128  cd Class_2_Activities
+  129  ls
+  130  pwd
+  131  ls
+  132  ls
+  133  cd class_2_activities
+  134  ls
+  135  cd 01_ins_atm_application
+  136  ls
+  137  cd unsolved
+  138  ls
+  139  ls
+  140  cd
+  141  ls
+  142  cd downloads
+  143  ls
+  144  cd class_2_activities
+  145  ls
+  146  cd class_2_activities
+  147  ls
+  148  cd 01_ins_atm_application
+  149  ls
+  150  cd unsolved
+  151  ls
+  152  python atm
+  153  pip install pytest
+  154  cd..
+  155  cd ..
+  156  cd ..
+  157  ls
+  158  cd 02_stu_build_atm_functions
+  159  ls
+  160  cd unsolved
+  161  ls
+  162  pip install ~requirements.txt
+  163  ls
+  164  call atm
+  165  run atm
+  166  python atm.py
+  167  cd atm
+  168  ls
+  169  python atm.py
+  170  111111
+  171  python atm.py
+  172  python utils.py
+  173  python atm.py
+  174  python atm.py
+  175  ls
+  176  git clone https://github.com/LZhou1688/ATM_Class_Activity
+  177  ls
+  178  ls
+  179  ls
+  180  ls
+  181  cd atm_class_activity
+  182  ls
+  183  git status
+  184  git add
+  185  git add .
+  186  git commit -m added all atm files
+  187  git commit -m "added all atm files"
+  188  git config --global user.email "lzhou1688@gmail.com
+  189  git config --global user.name "Ling Zhou"
+  190  git commit -m "added all atm files"
+  191  git push
+  192  ls
+  193  git config --global user.email "lzhou1688@gmail.com"
+  194  git config --global user.name "Ling Zhou"
+  195  git commit -m "added all atm files"
+  196  git push
+  197  git add.
+  198  git add .
+  199  git status
+  200  code
+  201  ls
+  202  pip freeze
+  203  conda activate dev
+  204  pip -v
+  205  pip install fire
+  206  pip install questionary
+  207  ls
+  208  cd downloads
+  209  ls
+  210  cd 01_Loan_Qualifier_Financial_Calculations
+  211  ls
+  212  cd 01_Loan_Qualifier_Financial_Calculations
+  213  ls
+  214  cd unsolved
+  215  ls
+  216  cd data
+  217  code
+  218  git config --global ling.zhou
+  219  git
+  220  git config --global lzhou1688@gmail.com
+  221  git config --list
+  222  ls
+  223  jupyterlab
+  224  jupyter lab
+  225  ls
+  226  jupyter lab
+  227  ls
+  228  cd~
+  229  cd ~
+  230  ls
+  231  ls downloads
+  232  ls 01_importing_the_vix
+  233  cd 01_importing_the_vix
+  234  cd 01_Importing_the_VIX
+  235  ls
+  236  cd downloads
+  237  ls
+  238  cd 01_Importing_the_VIX 
+  239  ls
+  240  cd 01_Importing_the_VIX 
+  241  ls
+  242  cd unsolved
+  243  ls
+  244  ls
+  245  ls
+  246  Importing_the_VIX.ipynb
+  247  ls
+  248  Open Importing_the_VIX.ipynb
+  249  conda activate dev
+  250  jupyter lab
+  251  jupyter lab
+  252  code
+  253  git config --list
+  254  cd
+  255  ls
+  256  cd ~
+  257  ls
+  258  cd my_documents
+  259  cd My_Documents
+  260  cd Documents
+  261  ls
+  262  git clone https://github.com/LZhou1688/challenge_two.git
+  263  ls
+  264  cd challenge_two
+  265  ls
+  266  git status
+  267  git status
+  268  git status
+  269  git add README.md
+  270  git status
+  271  git status
+  272  git add loan_qualifier_app/
+  273  git status
+  274  git commit -m "added the challenge 2 files to my repository folder"
+  275  git status
+  276  git push
+  277  git revert c3a2269
+  278  git status
+  279  git commit
+  280  git status
+  281  git status
+  282  git status
+  283  git commit
+  284  git status
+  285  git status
+  286  cd ~
+  287  ls
+  288  cd Documents
+  289  git clone https://github.com/LZhou1688/challenge_two.git
+  290  git status
+  291  ls
+  292  cd challenge_two
+  293  ls
+  294  git clone https://github.com/LZhou1688/challenge_two.git
+  295  git status
+  296  git status
+  297  git add app.py
+  298  git add challenge_two/ data/ qualifier/ README.md
+  299  git status
+  300  git commit "added all the necessary files, replaced README.md with challenge version"
+  301  git commit -m "added all the necessary files, replaced README.md with challenge version"
+  302  git push
+  303  code
+  304  ls
+  305  cd challenge_two
+  306  ls
+  307  git status
+  308  git add README.md app.py data/ qualifier/
+  309  git status
+  310  cd commit -m "consolidated to 1 folder"
+  311  git commit -m "consolidated to 1 folder"
+  312  git status
+  313  git push
+  314  cd ~
+  315  ls
+  316  cd Documents
+  317  ls
+  318  ls
+  319  git clone https://github.com/LZhou1688/challenge_two.git
+  320  ls
+  321  cd challenge_two
+  322  ls
+  323  git status
+  324  git add README.md app.py data/ qualifier/
+  325  git status
+  326  git commit -m "added files and replaced README"
+  327  git push
+  328  code
+  329  git status
+  330  git add app.py new_file.csv
+  331  git status
+  332  git commit -m "added write csv function"
+  333  git push
+  334  git status
+  335  git status
+  336  git add app.py
+  337  git status
+  338  git commit -m "added the save_csv function"
+  339  history 50 > terminal_history.txt
+  340  history 500 > terminal_history.txt
